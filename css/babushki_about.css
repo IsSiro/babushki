@@ -1,0 +1,329 @@
+body {
+	font-family: 'Roboto', sans-serif;;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+div, p, input, button, form, span, a, ul, li {
+	box-sizing: border-box;
+	text-decoration: none;
+	color: #6B4917;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+p {
+	line-height: 1.65em;
+}
+
+img {
+	object-fit: contain;
+	height: auto;
+}
+
+.container {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+/* header */
+.header {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #FFB94E;
+}
+
+.wrapper {
+	display: flex;
+	padding: 15px 0;
+}
+
+.logo_wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	margin-top: 15px;
+}
+
+.logo_descriptor {
+	margin-top: 0;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.offer_wrapper {
+	display: flex;
+	margin: 0 150px;
+}
+
+.logline {
+	margin-left: 20px;
+	font-size: 20px;
+	font-weight: 700;
+	width: 300px;
+}
+
+.entry {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: 5px;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+
+.entry_holder {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: -15px;
+	cursor: pointer;
+}
+
+.entry_holder:hover p,
+.entry_holder:hover .fas {
+	color: #fff;
+}
+
+.entry_holder:hover .fas {
+	transform: scale(1.3);
+}
+
+.fas {
+	margin-right: 10px;
+	transition: all ease 0.3s;
+}
+
+/* menu */
+.nav {
+	background-color: #FDD18E;
+}
+
+.main_nav {
+	display: inline-block;
+	margin: 20px 0 20px 350px;
+
+}
+
+.main_nav a{
+	position: relative;
+	font-size: 20px;
+	margin-left: 75px;
+	text-decoration: none;
+	color: #6B4917;
+}
+
+.main_nav a:first-child {
+	margin-left: 0;
+}
+
+.main_nav a:after {
+  	position: absolute;
+  	top: 25px;
+  	left: 0;
+  	right: 0;
+  	margin: auto;
+  	width: 0%;
+  	content: '.';
+  	color: transparent;
+  	background: #AC7829;
+  	height: 2px;
+  	transition: all 0.5s;
+}
+
+.main_nav .active {
+	color: #AC7829;
+}
+
+.main_nav a:hover:after,
+.main_nav a:focus:after,
+.main_nav .active:after {
+	width: 100%;
+}
+
+.main_nav a:hover,
+.main_nav a:focus {
+	color: #AC7829;
+}
+
+/* main */
+.rules {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.rule {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 40px;
+}
+
+.rule i {
+	font-size: 40px;
+}
+
+.rule_title {
+	font-size: 30px;
+}
+
+.rule_descriptor {
+	font-size: 20px;
+}
+
+.rule:after {
+	content: '';
+	width: 100%;
+	height: 1.8px;
+	background-color: #6B4917;
+	margin-top: 60px;
+}
+
+.rule:last-child:after {
+	display: none;
+}
+
+/* footer */
+.footer {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #FFB94E;
+	padding: 20px 0;
+}
+
+.footer_wrapper {
+	display: flex;
+}
+
+.social_wrapper {
+	display: flex;
+	margin-top: 30px;
+}
+
+.social_item {
+	font-size: 35px;
+	margin-left: 30px;
+	margin-top: auto;
+	margin-bottom: auto;
+	transition: all ease 0.7s;
+}
+
+.social_item:first-child {
+	margin-left: 0;
+}
+
+.social_item:hover {
+	transform: rotate(-360deg);
+}
+/* Responsive */
+
+/* 992px - 1200px */
+@media screen and (max-width: 1200px) {
+	.container {
+		width: 960px;
+	}
+
+	.offer_wrapper {
+		margin: 0 50px;
+	}
+
+	.main_nav {
+		margin: 20px 0 20px 250px;
+	}
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+	.container {
+		width: 720px;
+	}
+
+	.entry {
+		margin-top: 0;
+	}
+
+	.wrapper {
+		justify-content: space-around;
+	}
+
+	.offer_wrapper {
+		display: none;
+	}
+
+	.nav {
+		text-align: center;
+	}
+
+	.main_nav {
+		margin: 20px auto;
+	}
+
+	.footer_wrapper {
+		justify-content: space-around;
+	}
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+	.container {
+		width: 540px;
+	}
+
+	.profile {
+		margin-top: -30px;
+	}
+
+	.footer_wrapper {
+		flex-direction: column;
+	}
+
+	.logo_wrapper,
+	.social {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/* 320px - 576px */
+@media screen and (max-width: 576px) {
+	.container {
+		width: 90%;
+	}
+
+	.logo_pic {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.logo_descriptor {
+		display: none;
+	}
+
+	.main_nav {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 20px 0;
+		margin: 0 0 20px 20px;
+	}
+
+	.main_nav a {
+		margin-left: 0;
+		padding-top: 10px;
+	}
+
+	.main_nav a:first-child {
+		margin-top: 0;
+	}
+
+	.main_nav a:after {
+		display: none;
+	}
+}

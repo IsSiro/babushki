@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>БабушкINN</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/babushki.css">
+</head>
+<body>
+	<header id="header" class="header">
+		<div class="container">
+			<div class="wrapper">
+				<div class="logo_wrapper">
+					<img alt="logo" class="logo_pic" src="img/babushki_logo.png">
+					<p class="logo_descriptor">Сервис поиска гостеприимных бабушек</p>
+				</div>
+				<div class="offer_wrapper">
+					<img alt="grandma" class="offer_pic" src="img/babushki_pic.png">
+					<p class="logline">Вкусно, как у бабушки, потому что это она и есть</p>
+				</div>
+				<div class="entry">
+					<a href="#" class="entry_holder log_in">
+						<i class="fas fa-sign-in-alt"></i>
+						<p class="log_text">Вход</p>
+					</a>
+					<a href="#" class="entry_holder sign_in">
+						<i class="fas fa-user-plus"></i>
+						<p class="sign_text">Регистрация</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section id="nav" class="nav">
+		<div class="container">
+			<div class="main_nav">
+				<a class="active" href="#" title="Найти">Поиск бабушки</a>
+				<a href="babushki_personal_alevtina.html" title="Подробнее о бабушках">Каталог</a>
+				<a href="babushki_about.html" title="Подробнее о нас">О проекте</a>
+			</div>
+		</div>
+	</section>
+	<section id="main" class="main">
+		<div class="container">
+			<input type="checkbox" id="search_toggle" hidden>
+    		<div class="search">
+       			<label for="search_toggle" class="search_toggle" onclick></label>
+       			<h1 class="search_title">Бабушка вас</h1>
+       			<form>
+	       			<div class="switch_holder">
+	       				<label class="switch">
+							<input type="checkbox" checked="">
+							<span class="slider round"></span>
+	       					<p>Накормит, напоит</p>
+						</label>
+	       				<label class="switch">
+							<input type="checkbox">
+							<span class="slider round"></span>
+							<p>и спать уложит</p>
+						</label>
+					</div>
+					<div class="select_box">
+						<p class="label">Расположение</p>
+					    <div class="select">
+						  	<select name="sources" id="sources" class="custom-select sources" placeholder="Ваш город">
+						    	<option value="msk">Москва</option>
+						    	<option value="spb">Санкт-Петербург</option>
+						    	<option value="yar">Ярославль</option>
+						    	<option value="ore">Оренбург</option>
+						  </select>
+						</div>
+					</div>
+					<p class="checkbox_label">Кухня</p>
+					<div class="checkbox_holder">
+						<div class="checkbox_col col_1">
+							<label class="control control--checkbox">русская
+								<input type="checkbox"/>
+								<div class="control__indicator"></div>
+							</label>
+							<label class="control control--checkbox">деревенская
+							    <input type="checkbox"/>
+							    <div class="control__indicator"></div>
+							</label>
+							<label class="control control--checkbox">вегетарианская
+							    <input type="checkbox"/>
+							    <div class="control__indicator"></div>
+							</label>
+						</div>
+						<div class="checkbox_col col_2">
+							<label class="control control--checkbox">узбекская
+								<input type="checkbox"/>
+								<div class="control__indicator"></div>
+							</label>
+							<label class="control control--checkbox">бурятская
+								<input type="checkbox"/>
+								<div class="control__indicator"></div>
+							</label>
+							<label class="control control--checkbox">грузинская
+								<input type="checkbox"/>
+								<div class="control__indicator"></div>
+							</label>
+						</div>
+					</div>
+					<div class="range_holder">
+						<p class="range_label">Количество гостей:</p>
+							<datalist class="guest_number" id="guests">
+							  <option class="range_option" value="1"></option>
+							  <option class="range_option" value="2"></option>
+							  <option class="range_option" value="3"></option>
+							  <option class="range_option" value="4"></option>
+							  <option class="range_option" value="5"></option>
+							  <option class="range_option" value="6"></option>
+							</datalist>
+						<input id="range" type="range" min="1" max="6" step="1" value="1" list="guests" onmousemove="rangevalue1.value=value" />
+  						<output id="output"></output>
+					</div>
+					<div class="switch_holder switch_holder_2">
+	       				<label class="switch switch_2">
+							<input type="checkbox">
+							<span class="slider round"></span>
+	       					<p>без детей</p>
+						</label>
+	       				<label class="switch switch_2">
+							<input type="checkbox">
+							<span class="slider round"></span>
+							<p>без животных</p>
+						</label>
+					</div>
+					<input class="sum" type="button" value="Показать"/>
+				</form>
+       		</div>
+			<div class="content">
+				<div class="category_wrapper">
+					<div class="interesting category">
+						<div class="category_title">
+							<h2 class="category_name"><i class="fas fa-drumstick-bite"></i> Часто ищут</h2>
+						</div>
+						<div class="cards_holder">
+							<div class="card galina">
+								<a class="image" href="babushki_personal_galina.html" target="blank_">
+									<img alt="" src="img/babushki_galina.png">
+	  								<div class="overlay">Галина Ивановна, 68</div>
+	  							</a>
+								<p class="card_descript"><i class="fas fa-user-graduate"></i>Интересный собеседник</p>
+							</div>
+							<div class="card zinaida">
+								<a class="image" href="babushki_personal_zinaida.html" target="blank_">
+									<img alt="" src="img/babushki_zinaida.png">
+	  								<div class="overlay">Зинаида Яновна, 84</div>
+	  							</a>
+								<p class="card_descript"><i class="fas fa-seedling"></i>Вегетарианка</p>
+							</div>
+							<div class="card alevtina">
+								<a class="image" href="babushki_personal_alevtina.html" target="blank_">
+									<img alt="" src="img/babushki_alevtina.png">
+	  								<div class="overlay">Алевтина Павловна, 88</div>
+	  							</a>
+								<p class="card_descript"><i class="far fa-laugh-beam"></i> Веcелый собеседник</p>
+							</div>
+						</div>
+					</div>
+					<div class="sleep category">
+						<div class="category_title">
+							<h2 class="category_name"><i class="fas fa-bed"></i> Хорошо выспаться</h2>
+						</div>
+						<div class="cards_holder">
+							<div class="card valentina">
+								<a class="image" href="babushki_personal_valentina.html" target="blank_">
+									<img alt="" src="img/babushki_valentina.png">
+	  								<div class="overlay">Валентина Олеговна, 62</div>
+	  							</a>
+								<p class="card_descript"><i class="fas fa-cat"></i>Есть кошка</p>
+							</div>
+							<div class="card margarita">
+								<a class="image" href="babushki_personal_margarita.html" target="blank_">
+									<img alt="" src="img/babushki_margarita.png">
+	  								<div class="overlay">Маргарита Игоревна, 57</div>
+	  							</a>
+								<p class="card_descript"><i class="fas fa-baby"></i>В доме ребенок</p>
+							</div>
+							<div class="card varvara">
+								<a class="image" href="babushki_personal_varvara.html" target="blank_">
+									<img alt="" src="img/babushki_varvara.png">
+	  								<div class="overlay">Варвара Семеновна, 80</div>
+	  							</a>
+								<p class="card_descript"><i class="fas fa-dog"></i>Есть собака</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer id="footer" class="footer">
+		<div class="container">
+			<div class="footer_wrapper">
+				<div class="logo_wrapper">
+					<img alt="logo" class="logo_pic" src="img/babushki_logo.png">
+					<p class="logo_descriptor">Сервис поиска гостеприимных бабушек</p>
+				</div>
+				<div class="offer_wrapper">
+					<img alt="grandma" class="offer_pic" src="img/babushki_pic.png">
+					<p class="logline">Вкусно, как у бабушки, потому что это она и есть</p>
+				</div>
+				<div class="social">
+					<div class="social_wrapper">
+							<a class="social_item" href="#"><i class="fab fa-odnoklassniki"></i></a>
+							<a class="social_item" href="#"><i class="fab fa-instagram"></i></a>
+							<a class="social_item" href="#"><i class="fab fa-vk"></i></a>
+							<a class="social_item" href="#"><i class="fab fa-facebook-f"></i></a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/select.js"></script>
+	<script src="js/output.js"></script>
+    <script src="https://kit.fontawesome.com/a71224076e.js" crossorigin="anonymous"></script>
+</body>
+</html>
